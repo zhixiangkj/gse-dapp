@@ -1,0 +1,30 @@
+@import "vars";
+@import "vux-reset";
+@import "mixins";
+* {
+  box-sizing:border-box;
+}
+html, body, #app{
+  height: 100%;
+  color: @black-color;
+  font-family: 'SFProText-Regular';
+  font-size: @primay-font-size;
+  font-weight: 400;
+}
+body{
+  margin: 0;
+}
+#app{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  outline: none;
+  border: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+

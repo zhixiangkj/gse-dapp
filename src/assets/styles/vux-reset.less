@@ -1,0 +1,24 @@
+@import "./vars";
+// x-button
+.weui-btn{
+  font-family:SFProText-Semibold;
+  font-weight:600;
+  &.weui-btn_primary{
+    &:after{
+      border: none;
+    }
+  }
+  &.weui-btn_default{
+    border: 1px solid @separator-color;
+    &:after{
+      border: none;
+    }
+  }
+}
+
+// toast
+.weui-toast{
+  .weui-toast__content{
+    font-size: @toast-font-size;
+  }
+}

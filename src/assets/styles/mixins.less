@@ -1,0 +1,46 @@
+@import "vars";
+.add-separator(@color: @separator-color, @height: 1px, @left: 0, @right: 0) {
+  position: relative;
+  &:before{
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: @left;
+    right: @right;
+    height: 0px;
+    margin: auto;
+    border-bottom: @height * 10 solid @color;
+    -webkit-transform-origin: 0 @height * 10;
+    transform-origin: 0 @height * 10;
+    -webkit-transform: scaleY(.1);
+    transform: scaleY(.1);
+    z-index: 101;
+  }
+}
+
+.placeholderColor(@color: @placeholder-color; @fontSize: @placeholder-font-size) {
+&::-webkit-input-placeholder{
+  color: @color;
+  font-size: @fontSize;
+  font-family:SFProText-Regular;
+  font-weight:400;
+}
+&:-moz-placeholder{
+  color: @color;
+  font-size: @fontSize;
+  font-family:SFProText-Regular;
+  font-weight:400;
+}
+&::-moz-placeholder{
+  color: @color;
+  font-size: @fontSize;
+  font-family:SFProText-Regular;
+  font-weight:400;
+}
+&:-ms-input-placeholder{
+  color: @color;
+  font-size: @fontSize;
+  font-family:SFProText-Regular;
+  font-weight:400;
+}
+}
